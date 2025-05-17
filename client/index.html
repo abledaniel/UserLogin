@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="auth-buttons">
+                <button id="login-btn" class="btn">Login</button>
+                <button id="register-btn" class="btn">Register</button>
+            </div>
+            <div id="user-menu" class="hidden">
+                <span id="welcome-message"></span>
+                <button id="logout-btn" class="btn">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Login Form -->
+        <section id="login-section" class="auth-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="register-section" class="auth-section hidden">
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-firstname">First Name</label>
+                    <input type="text" id="register-firstname" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-lastname">Last Name</label>
+                    <input type="text" id="register-lastname" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-birthday">Birthday</label>
+                    <input type="date" id="register-birthday" name="birthday" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-bio">Biography</label>
+                    <textarea id="register-bio" name="biography" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="register-favnumber">Favorite Number</label>
+                    <input type="number" id="register-favnumber" name="favoriteNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-picture">Profile Picture (JPG only)</label>
+                    <input type="file" id="register-picture" name="profilePicture" accept=".jpg,.jpeg">
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile-section" class="hidden">
+            <h2>Profile</h2>
+            <img id="profile-picture" alt="Profile Picture">
+            <div class="profile-container">
+                <div class="profile-picture-container">
+                    <form id="picture-upload-form">
+                        <input type="file" name="profilePicture" accept="image/jpeg" required>
+                        <button type="submit" class="btn">Upload Picture</button>
+                    </form>
+                </div>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-email">Email</label>
+                        <input type="email" id="profile-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-firstname">First Name</label>
+                        <input type="text" id="profile-firstname" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-lastname">Last Name</label>
+                        <input type="text" id="profile-lastname" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-birthday">Birthday</label>
+                        <input type="date" id="profile-birthday" name="birthday" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-bio">Biography</label>
+                        <textarea id="profile-bio" name="biography" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-favnumber">Favorite Number</label>
+                        <input type="number" id="profile-favnumber" name="favoriteNumber" required>
+                    </div>
+                    <button type="submit" class="btn">Update Profile</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="error-message" class="error hidden"></div>
+    <div id="success-message" class="success hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
